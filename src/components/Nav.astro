@@ -1,11 +1,17 @@
 
 <header>
     <nav>
-        <ul class ="flex justify-center items-center gap-32 font-light">
+        <ul class ="hidden lg:flex justify-center items-center gap-32 font-light">
             <a href="#" class="p-3">inicio</a>
             <a href="#" class="p-3">pre diseñados</a>
             <a href="#" class="p-3">personalizados</a>
             <a href="#" class="p-3">contacto</a>
         </ul>
     </nav>
+    <button class="lg:hidden group w-7 h-7 m-3">
+        <div class="absolute h-[2px] w-7 bg-neutral-200 top-5 group-hover:rotate-45 group-hover:top-7 transition-all"></div>
+        <div class="absolute h-[2px] w-4 bg-neutral-200 top-7 group-hover:w-0 group-hover:bg-transparent transition-all"></div>
+        <div class="absolute h-[2px] w-2 bg-neutral-200 top-9 group-hover:-rotate-45 group-hover:w-7 group-hover:top-7 transition-all"></div>
+    </button>
+
 </header>
