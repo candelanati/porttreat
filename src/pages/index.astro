@@ -5,14 +5,32 @@ import Layout from '../layouts/Layout.astro';
 import '@fontsource-variable/outfit';
 ---
 <Layout title="Port Treat">
-    <main class="flex flex-col items-center mx-60">
+    <main class="flex flex-col items-center mx-48">
         <div class="w-[23rem] "> 
             <img src="logo.png" alt="PortTreat Logo" class=" w-fit mt-32">
             <h1 class=" text-xl mt-5 font-light">Diseño de cuadros y posters por encargo.</h1>
             
         </div>
-        <h2 class=" text-2xl font-bold w-full mt-16 " id="pre">Pre Diseñados</h2>
-        <Card album="Happier Than Ever" artista="Billie Eilish" href="#" img='/happier_than_ever.png'/>
-            
+        <h2 class=" text-2xl font-bold w-full mt-28 mb-10" id="pre">Pre Diseñados</h2>
+        
+        <div class=" border grid grid-cols-5 w-full justify-items-center gap-10">
+            <Card album="Happier Than Ever" artista="Billie Eilish" href="#" img='/happier_than_ever.png'/>
+            <Card album="Happier Than Ever" artista="Billie Eilish" href="#" img='/happier_than_ever.png'/>
+            <Card album="Happier Than Ever" artista="Billie Eilish" href="#" img='/happier_than_ever.png'/>
+            <Card album="Happier Than Ever" artista="Billie Eilish" href="#" img='/happier_than_ever.png'/>
+            <Card album="Happier Than Ever" artista="Billie Eilish" href="#" img='/happier_than_ever.png'/>
+            <Card album="Happier Than Ever" artista="Billie Eilish" href="#" img='/happier_than_ever.png'/>
+            <Card album="Happier Than Ever" artista="Billie Eilish" href="#" img='/happier_than_ever.png'/>
+            <Card album="Happier Than Ever" artista="Billie Eilish" href="#" img='/happier_than_ever.png'/>
+            <Card album="Happier Than Ever" artista="Billie Eilish" href="#" img='/happier_than_ever.png'/>
+            <Card album="Happier Than Ever" artista="Billie Eilish" href="#" img='/happier_than_ever.png'/>
+        </div>
+        
+        <h2 class=" text-2xl font-bold w-full mt-28 mb-10" id="personalizados">Personalizados</h2>
+        <div class="flex w-full justify-left gap-20">
+            <Card album="Personalizado 1" artista="Canciones" href="#" img='/personalizado_1.png'/>
+            <Card album="Personalizado 1" artista="Info" href="#" img='/personalizado_2.png'/>
+        </div>
+
     </main>
 </Layout>
