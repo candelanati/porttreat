@@ -26,8 +26,29 @@ const { title } = Astro.props;
 	</body>
 </html>
 
-<style>
+<style is:global>
 	* {
 		scroll-behavior: smooth;
+	}
+
+		/* width */
+	::-webkit-scrollbar {
+	width: 15px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.915);
+	}
+	
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	background: rgba(77, 77, 77, 0.835); 
+	border-radius: 8px;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	background: rgba(121, 121, 121, 0.835); 
 	}
 </style>
