@@ -9,13 +9,13 @@ interface Props {
 const { href, album, artista, img } = Astro.props;
 ---
 
-<a class=" group w-52" href={href}>
-	<p class=" font-medium">{album}</p>
-	<p class=" font-light">{artista}</p>
-	<div class=" bg-neutral-300 w-52 h-64 rounded-sm flex justify-center items-center relative">
-		<img class=" w-40 h-52" src={img} alt="poster">
-		<div class=" transition-all  bg-transparent group-hover:bg-black/50 w-full h-full absolute flex justify-center items-center">
-			<p class=" transition-all  text-transparent group-hover:border group-hover:text-neutral-50 rounded-md px-4 pb-[2px]">ver</p>
+<a class="group w-full" href="#">
+	<p class="font-medium">Happier Than Ever</p>
+	<p class="font-light">Billie Eilish</p>
+	<div class="bg-neutral-300 w-full aspect-w-5 aspect-h-7 rounded-sm flex justify-center items-center relative overflow-hidden p-[10%]">
+		<img class="object-cover w-full h-full" src="/happier_than_ever.png" alt="poster">
+		<div class="transition-all bg-transparent group-hover:bg-black/50 w-full h-full absolute flex justify-center items-center">
+			<p class="transition-all text-transparent group-hover:border group-hover:text-neutral-50 rounded-md px-4 pb-[2px]">ver</p>
 		</div>
 	</div>
 </a>
