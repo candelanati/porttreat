@@ -1,8 +1,8 @@
 
-<header>
+<header class="fixed w-full z-50 transition-all duration-700 " id="header">
     <nav>
         <ul class ="hidden lg:flex justify-center items-center gap-32 font-light">
-            <a href="#" class="p-3 hover:text-neutral-400 transition-all">inicio</a>
+            <a href="#inicio" class="p-3 hover:text-neutral-400 transition-all">inicio</a>
             <a href="#pre" class="p-3 hover:text-neutral-400 transition-all">pre diseñados</a>
             <a href="#personalizados" class="p-3 hover:text-neutral-400 transition-all">personalizados</a>
             <a href="#contacto" class="p-3 hover:text-neutral-400 transition-all">contacto</a>
@@ -15,3 +15,18 @@
     </button>
 
 </header>
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("header").classList.add("backdrop-brightness-50");
+        document.getElementById("header").classList.add("backdrop-blur-md");
+    }
+    else {
+        document.getElementById("header").classList.remove("backdrop-brightness-50");
+        document.getElementById("header").classList.remove("backdrop-blur-md");
+    }
+}
+</script>
