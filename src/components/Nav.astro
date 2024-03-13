@@ -1,11 +1,11 @@
 
-<header class="fixed w-full z-50 transition-all duration-700 " id="header">
+<header class="fixed w-full z-50 transition-all duration-700 text-lg" id="header">
     <nav>
         <ul class ="hidden lg:flex justify-center items-center gap-32 font-light">
-            <a href="#inicio" class="p-3 hover:text-neutral-400 transition-all">inicio</a>
-            <a href="#pre" class="p-3 hover:text-neutral-400 transition-all">pre diseñados</a>
-            <a href="#personalizados" class="p-3 hover:text-neutral-400 transition-all">personalizados</a>
-            <a href="#contacto" class="p-3 hover:text-neutral-400 transition-all">contacto</a>
+            <a href="#inicio" class="p-3 hover:drop-shadow-[0_0px_5px_rgba(255,255,255,.5)] transition-all">inicio</a>
+            <a href="#pre" class="p-3 hover:drop-shadow-[0_0px_5px_rgba(255,255,255,.5)] transition-all">pre diseñados</a>
+            <a href="#personalizados" class="p-3 hover:drop-shadow-[0_0px_5px_rgba(255,255,255,.5)] transition-all">personalizados</a>
+            <a href="#contacto" class="p-3 hover:drop-shadow-[0_0px_5px_rgba(255,255,255,.5)] transition-all">contacto</a>
         </ul>
     </nav>
     <button class="lg:hidden group w-7 h-7 m-3">
@@ -17,16 +17,9 @@
 </header>
 
 <script>
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("header").classList.add("backdrop-brightness-50");
-        document.getElementById("header").classList.add("backdrop-blur-md");
-    }
-    else {
-        document.getElementById("header").classList.remove("backdrop-brightness-50");
-        document.getElementById("header").classList.remove("backdrop-blur-md");
-    }
-}
+    window.onscroll = () => {
+        const isScrolled = document.documentElement.scrollTop > 50;
+        document.getElementById("header").classList.toggle("backdrop-brightness-50", isScrolled);
+        document.getElementById("header").classList.toggle("backdrop-blur-md", isScrolled);
+    };
 </script>
