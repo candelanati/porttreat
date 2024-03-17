@@ -21,7 +21,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class={`bg-gradient-to-br ${Astro.props.alt_bg ? 'from-neutral-500 via-neutral-500 to-neutral-950' : 'from-black via-neutral-900 to-neutral-800'}  min-h-screen text-neutral-200 overflow-x-hidden`}>
+	<body class={`bg-gradient-to-br ${Astro.props.alt_bg ? 'from-neutral-500 via-neutral-500 to-neutral-950' : 'from-black via-neutral-900 to-neutral-800'}  min-h-screen text-neutral-200 overflow-x-hidden flex flex-col justify-between`}>
 		<Nav />
 		<slot />
 		<Footer />
