@@ -7,9 +7,6 @@ interface Props {
 }
 
 const { href, album, artista, img } = Astro.props;
-
-import { Image } from 'astro:assets';
-import albumImg from "../assets/happier_than_ever.png";
 ---
 
 <a class="group w-full" href="#">
@@ -19,6 +16,6 @@ import albumImg from "../assets/happier_than_ever.png";
 		<div class="z-10 transition-all bg-transparent group-hover:bg-black/50 w-full h-full absolute flex justify-center items-center">
 			<p class="transition-all text-transparent group-hover:border group-hover:text-neutral-50 rounded-md px-4 pb-[2px]">ver</p>
 		</div>
-		<Image class="object-cover w-full h-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" src={albumImg} alt={`Poster ${artista}`}>
+        <img class="object-cover w-full h-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" src={`src/assets/${img}`} alt={`Poster ${artista}`} height="3508" width="2481"/>
 	</div>
 </a>
