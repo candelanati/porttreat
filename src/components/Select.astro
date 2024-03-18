@@ -1,0 +1,19 @@
+---
+interface Props {
+	label: string;
+	id: string;
+    op1:string;
+	op2: string;
+}
+
+const { id, label, op1, op2 } = Astro.props;
+---
+<div>
+
+    <label for={id} class="block mb-2 text-lg font-bold text-white">{label}</label>
+    <select id={id} class="border text-sm rounded-lg focus:bg-neutral-950/80 block w-full p-2.5 bg-transparent border-neutral-400 placeholder-gray-400 text-white">
+        <option selected>Seleccione una opción</option>
+        <option value="US">{op1}</option>
+        <option value="CA">{op2}</option>
+    </select>
+</div>

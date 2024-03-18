@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Select from '../components/Select.astro';
 ---
 
 <Layout title="Album">
@@ -23,6 +24,16 @@ import Layout from '../layouts/Layout.astro';
             </div>
 
         </div>
-
+        <form class=" mx-auto grid grid-cols-2 gap-32 mt-20">
+            <Select id="presentacion" label="Presentación" op1="Poster" op2="Cuadro"></Select>
+            <Select id="color" label="Color" op1="Oscuro" op2="Claro"></Select>
+            <Select id="tamaño" label="Tamaño" op1="A4 (21cm x 29,7cm)" op2="A3 (29,7cm x 42cm)"></Select>
+            <Select id="info" label="Información" op1="Canciones" op2="Datos (discográfica, fecha de lanzamiento, etc)"></Select>
+            <div class="mx-auto col-span-2">
+                <label for="aclaraciones" class="block mb-2 text-lg font-bold text-white">Aclaraciones</label>
+                <textarea name="" id="" class="bg-transparent border rounded-lg  border-neutral-400 focus:bg-neutral-950/80 w-80 h-20"></textarea>
+            </div>
+        </form>
+        <a href="" class="flex items-center justify-center border rounded-full mt-10 w-28 h-9 font-bold transition-all bg-neutral-400/20 hover:bg-neutral-400/60 focus:bg-neutral-950/80">Pedir</a>
     </main>
 </Layout>
