@@ -1,13 +1,15 @@
 ---
 import '@/styles/globals.css'
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import { Button } from "@/components/ui/button"
+
+// import Card from '../components/Card.astro';
+// import { Button } from "@/components/ui/button"
 ---
 
 <Layout title="Welcome to Astro.">
 	<main class="mx-48">
-		<div class="flex w-full gap-3">
+		<!-- IMAGENES -->
+		<div class="flex w-full gap-3 mt-16">
 			<!-- LOGO -->
 			<div class=" flex flex-col justify-center w-4/5">
 				<img src="../../public/icono-landing.png" alt="ejemplos de proyectos en formato poster claro y oscuro">
@@ -17,8 +19,11 @@ import { Button } from "@/components/ui/button"
 				<img src="../../public/posters-ejemplos.png" alt="logo de la marca">
 			</div>
 		</div>
+		<!-- PRE DISEÑADOS -->
+		<section id="pre_diseñados">
+			<h2 class="text-5xl font-extrabold text-orange-400">Pre <span class="text-neutral-50">diseñados</span></h2>
 
-		
+		</section>
 
 	</main>
 </Layout>
