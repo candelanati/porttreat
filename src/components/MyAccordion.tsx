@@ -14,8 +14,8 @@ export function Accordion({ data = [] }: Props) {
     <BaseAccordion type="single" collapsible className="w-full">
       {data.map((item, i) => (
         <AccordionItem key={i} value={`item-${i}`}>
-          <AccordionTrigger>{item.title}</AccordionTrigger>
-          <AccordionContent>{item.description}</AccordionContent>
+          <AccordionTrigger className='text-orange-400 font-bold text-xl'>{item.title}</AccordionTrigger>
+          <AccordionContent className='text-base'>{item.description}</AccordionContent>
         </AccordionItem>
       ))}
     </BaseAccordion>
