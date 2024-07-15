@@ -1,0 +1,42 @@
+---
+import '@/styles/globals.css'
+import Layout from '../layouts/Layout.astro';
+import Card from "../components/Card.astro"
+
+const albums = [
+	{
+		album: "Personalizado 1",
+		artista: "Canciones",
+		href: "#",
+		img: "/personalizado/personalizado-1.png"
+	},
+	{
+		album: "Personalizado 2",
+		artista: "Info del album",
+		href: "#",
+		img: "/personalizado/personalizado-2.png"
+	},
+    {
+		album: "Personalizado 3",
+		artista: "poster (ver cápsulas)",
+		href: "#",
+		img: "/personalizado/personalizado-3.png"
+	},
+];
+---
+<Layout title="Porttreat. Personalizados">
+    <main class="mx-48 mt-20">
+        <h1 class="text-4xl font-bold text-orange-400  font-poppins">Personalizá <span class="text-neutral-50">tu porttreat.</span></h1>
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 w-full justify-items-center gap-10">
+            {albums.map(album => (
+                <Card 
+                  album={album.album} 
+                  artista={album.artista} 
+                  href={album.href} 
+                  img={album.img} 
+                />
+              ))}
+        </div>	
+    </main>
+</Layout>
+
