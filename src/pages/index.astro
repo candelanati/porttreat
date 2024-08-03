@@ -84,7 +84,13 @@ const albums = [
 				  ))}
 			</div>	
 			<!-- BOTON VER MÁS -->
-			<a href="" class=" mt-16 flex justify-center items-center m-auto rounded-full w-32 h-9 bg-orange-400 text-neutral-950 text-lg font-extrabold">Ver más</a>
+			<a href="" class=" mt-16 flex justify-center items-center m-auto rounded-full w-32 h-9 bg-orange-400 text-neutral-950 text-lg font-extrabold hover:scale-105 hover:font-black hover:text-lg">Ver más</a>
+		</section>
+		<!-- PERSONALIZADOS -->
+		<section class="flex items-center gap-3 mb-40 mt-32">
+			<h2 class="text-4xl font-bold text-orange-400 font-poppins">Personalizá <span class="text-neutral-50">tu porttreat.</span></h2>
+			<!-- BOTON IR -->
+			<a href="/personalizados" class=" flex justify-center items-center  rounded-full w-24 h-9 bg-orange-400 text-neutral-950 text-lg font-extrabold hover:scale-105 hover:font-black hover:text-lg">Ir</a>
 		</section>
 		<!-- FAQ -->
 		<section id="FAQ" class="mt-44 mb-40">
@@ -93,5 +99,6 @@ const albums = [
 				<Accordion data={accordionData}  client:load />
 			</div>
 		</section>
+		
 	</main>
 </Layout>
