@@ -53,25 +53,26 @@ const albums = [
 ---
 
 <Layout title="Portreat.">
-	<main class="mx-48">
+	<main class="px-48 snap-y snap-mandatory h-screen w-screen overflow-y-auto scroll-container">
 		<!-- IMAGENES -->
-		<div class="flex w-full gap-3 mt-16">
-			<!-- LOGO -->
-			<div class=" flex flex-col justify-center w-4/5">
-				<img src="../../public/icono-landing.png" alt="ejemplos de proyectos en formato poster claro y oscuro">
+		<section class="scroll-item snap-start h-screen flex flex-col">
+			<article class="flex w-full gap-3 mt-16 ">
+				<!-- LOGO -->
+				<div class=" flex flex-col justify-center w-full">
+					<img src="../../public/icono-landing.png" alt="ejemplos de proyectos en formato poster claro y oscuro">
+				</div>
+				<!-- IMAGEN EJEMPLOS -->
+				<div class=" w-full">
+					<img src="../../public/posters-ejemplos.png" alt="logo de la marca">
+				</div>
+			</article>
+			<div class="flex-end">
+				<p class="text-base text-center text-neutral-300">PortTreat es un emprendimiento apasionado por la música, dedicado a crear posters y cuadros inspirados en álbumes y canciones de diversos artistas musicales.</p>	
+				<p class="text-base text-center text-neutral-300">Nuestro objetivo es permitir que cada persona tenga un pedacito de la música que más le gusta en su hogar.</p>
 			</div>
-			<!-- IMAGEN EJEMPLOS -->
-			<div class=" w-full">
-				<img src="../../public/posters-ejemplos.png" alt="logo de la marca">
-			</div>
-		</div>
-		<!-- INTRODUCCION -->
-		<section>
-			<p class="text-base text-center text-neutral-300">PortTreat es un emprendimiento apasionado por la música, dedicado a crear posters y cuadros inspirados en álbumes y canciones de diversos artistas musicales.</p>	
-			<p class="text-base text-center text-neutral-300">Nuestro objetivo es permitir que cada persona tenga un pedacito de la música que más le gusta en su hogar.</p>
 		</section> 
 		<!-- PRE DISEÑADOS -->
-		<section id="pre-diseñados" class="mt-44">
+		<section id="pre-diseñados" class="scroll-item snap-start h-screen pt-32">
 			<h2 class="text-4xl font-bold text-orange-400  font-poppins">Pre <span class="text-neutral-50">diseñados</span></h2>
 			<div class="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 w-full justify-items-center gap-10">
 				{albums.map(album => (
@@ -87,18 +88,52 @@ const albums = [
 			<a href="" class=" mt-16 flex justify-center items-center m-auto rounded-full w-32 h-9 bg-orange-400 text-neutral-950 text-lg font-extrabold hover:scale-105 hover:font-black hover:text-lg">Ver más</a>
 		</section>
 		<!-- PERSONALIZADOS -->
-		<section class="flex items-center gap-3 mb-40 mt-32">
-			<h2 class="text-4xl font-bold text-orange-400 font-poppins">Personalizá <span class="text-neutral-50">tu porttreat.</span></h2>
+		<section class="flex flex-col items-center justify-center gap-10 mb-40 mt-56 scroll-item h-screen">
+			<h2 class="text-7xl font-bold text-orange-400 font-poppins ">Personalizá <span class="text-neutral-50">tu porttreat.</span></h2>
 			<!-- BOTON IR -->
 			<a href="/personalizados" class=" flex justify-center items-center  rounded-full w-24 h-9 bg-orange-400 text-neutral-950 text-lg font-extrabold hover:scale-105 hover:font-black hover:text-lg">Ir</a>
 		</section>
 		<!-- FAQ -->
-		<section id="FAQ" class="mt-44 mb-40">
+		<section id="FAQ" class="flex flex-col justify-center mt-56 mb-40 scroll-item h-screen">
 			<h2 class="text-4xl font-bold text-orange-400  font-poppins">FAQ <span class="text-neutral-50">(preguntas precuentes)</span></h2>
 			<div class="text-neutral-50 mx-60 mt-16">
 				<Accordion data={accordionData}  client:load />
 			</div>
 		</section>
-		
 	</main>
+		
+
 </Layout>
+
+<style>
+	.scroll-container {
+		scroll-behavior: smooth;
+	}
+
+	.scroll-item {
+		scroll-snap-align: start;
+	}
+
+	@keyframes scroll {
+		0% { transform: translateY(0); }
+		100% { transform: translateY(-100%); }
+	}
+</style>
+
+<script>
+	const container = document.querySelector('.scroll-container');
+	const items = document.querySelectorAll('.scroll-item');
+
+	if (container) {
+	container.addEventListener('wheel', (event: Event) => {
+		event.preventDefault();
+		const wheelEvent = event as WheelEvent;
+		const delta = wheelEvent.deltaY;
+
+		container.scrollBy({
+		top: delta,
+		behavior: 'smooth'
+		});
+	});
+	}
+</script>
