@@ -56,14 +56,15 @@ const albums = [
 	<main class="px-48 snap-y snap-mandatory h-screen w-screen overflow-y-auto scroll-container">
 		<!-- IMAGENES -->
 		<section class="scroll-item snap-start h-screen flex flex-col">
-			<article class="flex w-full gap-3 mt-16 ">
+			<article class="flex items-center w-full gap-3 mt-16 ">
 				<!-- LOGO -->
-				<div class=" flex flex-col justify-center w-full">
+				<div class=" flex flex-col w-full relative group">
 					<img src="../../public/icono-landing.png" alt="ejemplos de proyectos en formato poster claro y oscuro">
+					<div class="absolute w-[2.8%] aspect-square bg-neutral-100 left-[14.7%] bottom-[28%] group-hover:blur xl:group-hover:blur-lg group-hover:scale-150 transition-all duration-700 ease-in-out focus:bg-orange-500"></div>
 				</div>
 				<!-- IMAGEN EJEMPLOS -->
 				<div class=" w-full">
-					<img src="../../public/posters-ejemplos.png" alt="logo de la marca">
+					<img src="../../public/posters-ejemplos.png" alt="logo de la marca" class="hover:translate-y-1 transition-transform duration-500 ease-out">
 				</div>
 			</article>
 			<div class="flex-end">
@@ -88,13 +89,13 @@ const albums = [
 			<a href="" class=" mt-16 flex justify-center items-center m-auto rounded-full w-32 h-9 bg-orange-400 text-neutral-950 text-lg font-extrabold hover:scale-105 hover:font-black hover:text-lg">Ver más</a>
 		</section>
 		<!-- PERSONALIZADOS -->
-		<section class="flex flex-col items-center justify-center gap-10 mb-40 mt-56 scroll-item h-screen">
+		<section class="flex flex-col items-center justify-center gap-10 scroll-item h-screen">
 			<h2 class="text-7xl font-bold text-orange-400 font-poppins ">Personalizá <span class="text-neutral-50">tu porttreat.</span></h2>
 			<!-- BOTON IR -->
 			<a href="/personalizados" class=" flex justify-center items-center  rounded-full w-24 h-9 bg-orange-400 text-neutral-950 text-lg font-extrabold hover:scale-105 hover:font-black hover:text-lg">Ir</a>
 		</section>
 		<!-- FAQ -->
-		<section id="FAQ" class="flex flex-col justify-center mt-56 mb-40 scroll-item h-screen">
+		<section id="FAQ" class="flex flex-col justify-center  scroll-item h-screen">
 			<h2 class="text-4xl font-bold text-orange-400  font-poppins">FAQ <span class="text-neutral-50">(preguntas precuentes)</span></h2>
 			<div class="text-neutral-50 mx-60 mt-16">
 				<Accordion data={accordionData}  client:load />
